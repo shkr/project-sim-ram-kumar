@@ -40,4 +40,3 @@ This is a simulation of a project that you might execute. Our goal is that by co
 **Is there an example solution?**
 
 1. Naive Bayes Classifier - https://github.com/shkr/wikiclassifier/blob/master/wikiclassifier.pdf
-2. LSTM based model - https://github.com/shkr/project-sim/blob/dev_classfication_model/Wikipedia%20Classifier.pdf
