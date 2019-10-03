@@ -7,7 +7,7 @@ We provide a sample of articles taken from Wikipedia. There are lots of differen
 
 **The data:** The directory contains wikipedia article html dumps. There are direct wgets of the articles, e.g. [malaria](https://en.wikipedia.org/wiki/Malaria), [autism](https://en.wikipedia.org/wiki/Autism), [Parkinson's disease](https://en.wikipedia.org/wiki/Parkinson%27s_disease). They are organized into two directories: <tt>positive/</tt> and <tt>negative/</tt>. The positive dataset is 3,693 articles about diseases, and the negative dataset is 10,000 articles.
 
-Here is the data set: [wikipedia_diseases.zip](https://gofile.io/?c=1P1rnz)
+Here is the data set: [wikipedia_diseases.zip](http://challenge.20n.com/machine-learning/training.tar.gz)
 
 **Edge cases:**
 
