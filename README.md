@@ -1,3 +1,67 @@
+
+## Best Model Summary 
+
+This is the best F1- Score I got so far, model architecture follows:
+
+```python
+def cnn_trainable_embedding_model():
+    embedding_layer = Embedding(len(word_index) + 1,
+                            EMBEDDING_DIM,
+                            input_length=MAX_SEQUENCE_LENGTH,trainable=True)
+
+    sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype='int32')
+    embedded_sequences = embedding_layer(sequence_input)
+    l_cov1= Conv1D(128, 5, activation='relu')(embedded_sequences)
+    l_pool1 = MaxPooling1D(5)(l_cov1)
+    l_cov2 = Conv1D(128, 5, activation='relu')(l_pool1)
+    l_pool2 = MaxPooling1D(5)(l_cov2)
+    l_cov3 = Conv1D(128, 5, activation='relu')(l_pool2)
+    l_pool3 = MaxPooling1D(35)(l_cov3)  # global max pooling
+    l_flat = Flatten()(l_pool3)
+    l_dense = Dense(128, activation='relu')(l_flat)
+    preds = Dense(2, activation='softmax')(l_dense)
+
+    model = Model(sequence_input, preds)
+    model.compile(loss='binary_crossentropy',
+                  optimizer='rmsprop',
+                  metrics=['acc'])
+
+    model.summary()
+    return model
+```
+
+### Metrics on Test data of best model
+
+**Confusion Matrix**
+
+| Negative | Positive |
+| ------ | ------ |
+| 991 | 9 |
+| 4 | 366 | 
+
+
+**Test F1 Score ** : `0.9825503355704698`
+
+**Evauation Metrics**
+
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      0.99      1000
+           1       0.98      0.99      0.98       370
+
+    accuracy        -        -         0.99      1370
+   
+
+* I have tried `class_weights` it also yields similar F1-score
+
+## Todo
+
+* Try different Neural Network Architecture like (LSTM, HAN)
+* Play with Hyperparameter of the existing model
+* Use pre-trained embeddings that are trained on top of Wikipedia dataset
+
+
+
 # The Problem: Classify Wikipedia Disease Articles
 
 We provide a sample of articles taken from Wikipedia. There are lots of different kinds of articles, and one flavor is those that describe a disease. The data are html dumps of wikipedia articles. We give you a labelled set of disease articles (positives), and non-diseases articles (negatives).
