@@ -40,7 +40,7 @@ def cnn_trainable_embedding_model():
 | 4 | 366 | 
 
 
-**Test F1 Score ** : `0.9825503355704698`
+**Test F1 Score** : `0.9825503355704698`
 
 **Evauation Metrics**
 
