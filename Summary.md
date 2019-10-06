@@ -22,6 +22,8 @@ Classifying whether article is about disease or not, It is a binary classificati
 
 I have used `beautifulsoup` libray to parse html document and extract text from `<title></title>` and all `<p></p>` tags. And Created few csv files 
 
+**Note** : I realised that I have not extracted the section headings under `<h2>` tags adding it to the todo and retrain the model. 
+
 **Columns** `article, y`
 
 * positive-combined.csv (A CSV of all postive samples)
@@ -92,5 +94,11 @@ And merged the postive and negative csv into single csv `dataset.csv` for model 
 
 * I have tried `class_weights` it also yields similar F1-score
 
+### Todo
+
+* Extract `<h2>` tags and add it to dataset and re-train the model 
+* Try different Neural Network Architecture like (LSTM, HAN)
+* Play with Hyperparameter of the existing model
+* Use pre-trained embeddings that are trained on top of Wikipedia dataset
 
 
