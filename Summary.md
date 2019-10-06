@@ -46,9 +46,12 @@ And merged the postive and negative csv into single csv `dataset.csv` for model 
 
 [link to notebook](https://github.com/shkr/project-sim-ram-kumar/blob/master/EDA.ipynb)
 
-* I have looked at the word count statistics, And identified at no of words per article 90th percentile is less the 1000 words.
+
+* I have looked at the word count statistics, And identified no of words per article at 90th percentile is less the 1000 words.
 
 * created a word cloud for negative and positive samples
+
+* Disease name follow certain medical convention typically with a suffix, Looking up those suffix information on internet to categorise the article. e.g `itis` is denotes `inflamatory condition`
 
 
 
