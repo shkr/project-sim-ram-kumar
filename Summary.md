@@ -22,6 +22,8 @@ Classifying whether article is about disease or not, It is a binary classificati
 
 I have used `beautifulsoup` libray to parse html document and extract text from `<title></title>` and all `<p></p>` tags. And Created few csv files 
 
+**Note** : I realised that I have not extracted the section headings under `<h2>` tags adding it to the todo and retrain the model. 
+
 **Columns** `article, y`
 
 * positive-combined.csv (A CSV of all postive samples)
@@ -46,9 +48,12 @@ And merged the postive and negative csv into single csv `dataset.csv` for model 
 
 [link to notebook](https://github.com/shkr/project-sim-ram-kumar/blob/master/EDA.ipynb)
 
-* I have looked at the word count statistics, And identified at no of words per article 90th percentile is less the 1000 words.
+
+* I have looked at the word count statistics, And identified no of words per article at 90th percentile is less the 1000 words.
 
 * created a word cloud for negative and positive samples
+
+* Disease name follow certain medical convention typically with a suffix, Looking up those suffix information on internet to categorise the article. e.g `itis` is denotes `inflamatory condition`
 
 
 
@@ -89,5 +94,11 @@ And merged the postive and negative csv into single csv `dataset.csv` for model 
 
 * I have tried `class_weights` it also yields similar F1-score
 
+### Todo
+
+* Extract `<h2>` tags and add it to dataset and re-train the model 
+* Try different Neural Network Architecture like (LSTM, HAN)
+* Play with Hyperparameter of the existing model
+* Use pre-trained embeddings that are trained on top of Wikipedia dataset
 
 
