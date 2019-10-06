@@ -10,7 +10,6 @@ There are lots of different kinds of articles, and one flavor is those that desc
 
 Classifying whether article is about disease or not, It is a binary classification problem. 
 
-[link to notebook](https://github.com/shkr/project-sim-ram-kumar/blob/master/DataExtraction.ipynb)
 
 ## Tasks
 
@@ -107,6 +106,9 @@ And merged the postive and negative csv into single csv `dataset.csv` for model 
 
 
 ## Part 2
+
+[link to notebook](https://github.com/shkr/project-sim-ram-kumar/blob/master/DataExtraction.ipynb)
+
 
 ## Data Extraction from Disease Aritcles
 
