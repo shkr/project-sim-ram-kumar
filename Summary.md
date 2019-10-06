@@ -2,6 +2,9 @@
 
 There are lots of different kinds of articles, and one flavor is those that describe a disease. The data are html dumps of wikipedia articles. We give you a labelled set of disease articles (positives), and non-diseases articles (negatives).
 
+* Part 1
+* Part 2
+
 
 ## Part 1
 
@@ -101,4 +104,38 @@ And merged the postive and negative csv into single csv `dataset.csv` for model 
 * Play with Hyperparameter of the existing model
 * Use pre-trained embeddings that are trained on top of Wikipedia dataset
 
+
+## Part 2
+
+## Data Extraction from Disease Aritcles
+
+The HTML dump is parsed using BeautifulSoup and Information like `disease_name`  `Symptoms`, `Treatment` or any other available information is captured.
+
+
+Resules are stored in CSV where as the extracted information is JSON
+
+### Headings captured
+
+* Signs and symptoms
+* Causes
+* Diagnosis
+* Treatment
+* Prognosis
+* Other First Level ToC headings
+
+#### E.g JSON structure of the information Captured
+
+`Thyroid Cancer`
+
+```json
+{
+    "Signs and symptom": "Most often the first symptom of thyroid cancer is a nodule in the thyroid region of the neck. However, many adults have small nodules in their thyroids, but typically under 5% of these nodules are found to be cancerous Sometimes the first sign is an enlarged lymph node. ."
+    
+    "Causes" : "Thyroid cancers are thought to be related to a number of environmental and genetic predisposing factors, but significant uncertainty remains regarding its causes."
+   
+    "Diagnosis": "After a thyroid nodule is found during a physical examination, a referral to an endocrinologist or a thyroidologist may occur. "
+    
+}
+
+```
 
